@@ -1,6 +1,6 @@
 :root {
-    --primary-color: #1d5888;
-    --secondary-color: #ff993b;
+    --primary-color: #3ab96f;
+    --secondary-color: #1d2c81;
     --dark-color: #292929;
     --white-color: #e7e7e7;
 }
@@ -44,7 +44,7 @@ footer .social>a:hover {
     color: orangered;
 }
 
-.cssicon {
+.css3icon {
     color: rgb(11,82,214);
 }
 
