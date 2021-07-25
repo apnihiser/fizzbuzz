@@ -13,6 +13,11 @@ nav {
     background-color: var(--dark-color);
 }
 
+.navFont {
+    font-family: 'Bodoni Moda', serif;
+    font-size: xx-large;
+}
+
 footer {
     background-color: var(--dark-color);
     padding-right: 1rem;
