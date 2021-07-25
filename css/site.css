@@ -1,6 +1,6 @@
 :root {
     --primary-color: #3ab96f;
-    --secondary-color: #1d2c81;
+    --secondary-color: #3eb5af;
     --dark-color: #292929;
     --white-color: #e7e7e7;
 }
@@ -68,4 +68,17 @@ main>.container {
     left: 0;
     bottom: 0;
     width: 100% ;
+}
+
+.Fizz {
+    color: darkgreen;
+}
+
+.Buzz {
+    color: darkblue;
+}
+
+.FizzBuzz {
+    color: red;
+    font-weight: bold;
 }
