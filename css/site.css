@@ -82,3 +82,9 @@ main>.container {
     color: red;
     font-weight: bold;
 }
+
+.highlight {
+    color: var(--primary-color);
+    font-style: italic;
+    font-weight: bold;
+}

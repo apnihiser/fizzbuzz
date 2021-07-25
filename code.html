@@ -57,17 +57,136 @@
             <div class="row row-cols-1 row-cols-lg-2">
                 <div class="col-lg-8">
                     <pre class="line-numbers"><code class="language-javascript">
-                            //Call Hello World
-                            function HelloWord(){
-                                alert("Hello World");
+                        //controller function
+
+                        //get values from user
+                        function getValues(){
+                        
+                            let fizzValue = document.getElementById("fizzValue").value;
+                            let buzzValue = document.getElementById("buzzValue").value;
+                        
+                            //validate information by use of boolean statement
+                            //parse for numbers, check that numbers are ints
+                            fizzValue = parseInt(fizzValue);
+                            buzzValue = parseInt(buzzValue);
+                        
+                            if (Number.isInteger(fizzValue) && Number.isInteger(buzzValue)) {
+                        
+                                //call logic function
+                                let resultant = fizzBuzz(fizzValue, buzzValue);
+                        
+                                //call display function
+                                displayFizzBuzz(resultant , fizzValue, buzzValue);
+                        
+                            } else {
+                        
+                                alert("Please enter an integer!");
+                        
+                            }    
+                        }
+                        
+                        //logic function
+                        //increment range using forloop
+                        //use modulo to check if number id divisible by 3 or 5, or both 3 and 5 (booleans)
+                        //push to array and return
+                        function fizzBuzz(fizzValue, buzzValue){
+                        
+                            let fizzBuzzValues = [];
+                        
+                            for(i = 1; i <= 100; i++){
+                        
+                                if ((i % fizzValue == 0) && (i % buzzValue == 0)){
+                        
+                                    fizzBuzzValues.push("FizzBuzz");
+                        
+                                } else if (i % fizzValue == 0) {
+                        
+                                    fizzBuzzValues.push("Fizz");
+                        
+                                } else if (i % buzzValue == 0){
+                        
+                                    fizzBuzzValues.push("Buzz");
+                        
+                                } else {
+                        
+                                    fizzBuzzValues.push(i);
+                        
+                                }
                             }
+                        
+                            return fizzBuzzValues;
+                        
+                        }
+                                                
+                        //view function
+                        //declare string to write
+                        //display function to DOM
+                        function displayFizzBuzz(fbData, fizzValue, buzzValue){
+                        
+                            //get the table body element from the page
+                            let tableBody = document.getElementById("results");
+                        
+                            //get the template row
+                            let templateRow = document.getElementById("fbTemplate");
+                        
+                            //clear table first
+                            tableBody.innerHTML = "";
+                        
+                            for (let i = 0; i < fbData.length; i += 5) {
+                                
+                                let tableRow = document.importNode(templateRow.content, true);
+                                
+                                //grab just the tds and put them into an array
+                                let rowCols = tableRow.querySelectorAll("td");
+                        
+                                rowCols[0].classList.add(fbData[i]);
+                                rowCols[0].textContent = fbData[i];
+                        
+                                rowCols[1].classList.add(fbData[i + 1]);
+                                rowCols[1].textContent = fbData[i + 1];
+                        
+                                rowCols[2].classList.add(fbData[i + 2]);
+                                rowCols[2].textContent = fbData[i + 2];
+                        
+                                rowCols[3].classList.add(fbData[i + 3]);
+                                rowCols[3].textContent = fbData[i + 3];
+                        
+                                rowCols[4].classList.add(fbData[i + 4]);
+                                rowCols[4].textContent = fbData[i + 4];
+                        
+                                tableBody.appendChild(tableRow);
+                            }
+                        }
+                        
                         </code>
                     </pre>
                 </div>
                 <div class="col-lg-4">
-                    <p>The Code is structured in one function.</p>
-                    <h5>Hello World</h5>
-                    <p>Hello World is a function that displays an alert with a message of "Hello World"</p>
+                    <h5>FUZZY - The APP Breakdown</h5>
+                    <p>FUZZY is a Javascript application written to gather a Fizz Value and a Buzz Value. This will replace these values with a table 1-100 where the numbers divisible by these values will be replaced with Fizz or Buzz respectively, or FizzBuzz if they are both divisible.</p>
+                    <p>FUZZY is a Javascript application written to gather a Fizz Value and a Buzz Value. This will replace these values with a table 1-100 where the numbers divisible by these values will be replaced with Fizz or Buzz respectively, or FizzBuzz if they are both divisible.</p>
+                    <ul>
+                        <li>The Controller function</li>
+                        <li>The Logic function</li>
+                        <li>The View function</li>
+                    </ul>
+                    <br>
+                    <h5>Controller Fuction</h5>
+                    <p>The Controller Function <span class="highlight">getValues()</span> works on several important discreet operations which receives inputs, validates data, and controls when other functions in the application are executed.</p>
+                    <p>Lets break these operations down individually</p>
+                    <h6>Input</h6>
+                    <p>By using a form, we have structured the web application in such a way that either by default or with user defined values, we can capture the necessary information to begin the process of running the application. Once the input values have been entered into the web form, the user can submit the data by click on the button.</p>
+                    <h6>Validation</h6>
+                    <p>Validation is required here since the application will fail if a string or text char is provided by the user. Also the values provided will be a string data type. Therefore the <span class="highlight">parseInt()</span> and <span class="highlight">isInteger()</span> Javascript functions are used to ensure that all data sent to be processed are valid. If any of this fails validation, the webpage will alert the user with "You must enter integers"</p>
+                    <h6>Function Calls</h6>
+                    <p>Lastly, this controller function will pass these validated values into the appropriate functions next. Both <span class="highlight">fizzBuzz()</span> and <span class="highlight">displayFizzBuzz()</span> are self explanatory in their purpose, but see the Logic function and View function below for more details.</p>
+                    <br>
+                    <h5>Logic Function</h5>
+                    <p>Fizz Buzz will operate on a simple algorithm. A for loop will count from 1 to 100 and each number will run an if statement checking if the current number is divisible by the fizzValue or buzzValue or both! If it does then push Fizz, Buzz or FizzBuzz respectively into an array. If the number is not divisible then simply push that current value into the array. Once the for loop has been completed then return the array. </p>
+                    <br>
+                    <h5>View Function</h5>
+                    <p>The fizzbuzz array from the <span class="highlight">fizzBuzz()</span> function will need to be rendered on the webpage. Step one will be to loop through the arrays using a for loop. We have declared variables to capture a HTML Template Row as well as the results table that will be populated with this data. Per each 5 column row we will be selecting the 5 TD tags from the template, and storing them in an array to be poluated with the FizzBuzz array generated during the logic Function. Then in a 5 count increment per each cylcle of the for loop the table will be filled in and appnded to the results table.</p>
+
                 </div>
             </div>
         </div>
