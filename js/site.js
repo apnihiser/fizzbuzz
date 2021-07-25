@@ -14,7 +14,7 @@ function getValues(){
     if (Number.isInteger(fizzValue) && Number.isInteger(buzzValue)) {
 
         //call logic function
-        let resultant = fizzBuzzC(fizzValue, buzzValue);
+        let resultant = fizzBuzz(fizzValue, buzzValue);
 
         //call display function
         displayFizzBuzz(resultant , fizzValue, buzzValue);
@@ -122,7 +122,7 @@ function displayFizzBuzz(fbData, fizzValue, buzzValue){
     //clear table first
     tableBody.innerHTML = "";
 
-    for (let i = 0; i < fbData.length; i += 5) {
+    for (let i = 0; i <= fbData.length; i += 5) {
         
         let tableRow = document.importNode(templateRow.content, true);
         
@@ -146,7 +146,5 @@ function displayFizzBuzz(fbData, fizzValue, buzzValue){
 
         tableBody.appendChild(tableRow);
     }
-
-
 
 }

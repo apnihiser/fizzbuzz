@@ -55,6 +55,7 @@
         <div class="container py-5 px-5 mt-5">
             <H2 class="border-1 border-bottom border-dark">The Code for APP NAME.</H2>
             <div class="row row-cols-1 row-cols-lg-2">
+                <!-- CODE HERE -->
                 <div class="col-lg-8">
                     <pre class="line-numbers"><code class="language-javascript">
                         //controller function
@@ -161,6 +162,7 @@
                         </code>
                     </pre>
                 </div>
+                <!-- CODE DESCRIPTION HERE -->
                 <div class="col-lg-4">
                     <h5>FUZZY - The Breakdown</h5>
                     <p>FUZZY is a Javascript application written to gather a Fizz Value and a Buzz Value and display a table 1-100 where the numbers divisible by these values will be replaced with Fizz or Buzz respectively, or FizzBuzz if they are both divisible.</p>
@@ -185,8 +187,8 @@
                     <p>Fizz Buzz will operate on a simple algorithm. A for loop will count from 1 to 100 and each number will run an if statement checking if the current number is divisible by the fizzValue or buzzValue or both! If it does then push Fizz, Buzz or FizzBuzz respectively into an array. If the number is not divisible then simply push that current value into the array. Once the for loop has been completed then return the array. </p>
                     <br>
                     <h5>View Function</h5>
-                    <p>The fizzbuzz array from the <span class="highlight">fizzBuzz()</span> function will need to be rendered on the webpage. Step one will be to loop through the arrays using a for loop. We have declared variables to capture a HTML Template Row as well as the results table that will be populated with this data. Per each 5 column row we will be selecting the 5 TD tags from the template, and storing them in an array to be poluated with the FizzBuzz array generated during the logic Function. Then in a 5 count increment per each cylcle of the for loop the table will be filled in and appnded to the results table.</p>
-
+                    <p>The fbData array from the <span class="highlight">fizzBuzz()</span> function will need to be rendered on the webpage. Step one will be to loop through the arrays using a for loop. We have declared variables to capture a HTML Template Row as well as the results table that will be populated with this data. Per each 5 column row we will be selecting the 5 TD tags from the template, and storing them in an array to be poluated with the FizzBuzz array generated during the logic Function. Then in a 5 count increment per each cylcle of the for loop the table will be filled in and appnded to the results table.</p>
+                    <p>One last interesting function used for formatting any "Fizz", "Buzz", or "FizzBuzz" values written into results table is how formating works via classList.add. The values from the fbData array will also be written into the table data cell class as well. These classes will be targetted by CSS.</p>
                 </div>
             </div>
         </div>
@@ -196,7 +198,7 @@
         <div class="container-fluid">
             <div class="row row-cols-1 row-cols-lg-3 gy-2">
                 <div class="col order-last order-lg-first text-light d-flex align-items-center justify-content-start">
-                    <div><span class="text-dark">&copy;2021</span> Adam Nihiser | anihiser@gmail.com</div>
+                    <div><span class="text-muted">&copy;2021</span> Adam Nihiser | anihiser@gmail.com</div>
                 </div>
                 <div class="col d-flex align-items-center justify-content-start justify-content-lg-center">
                     <img src="/img/adam_p_nihiser_logo_notitle.png" alt="Adam Nihiser Logo" height="48">
