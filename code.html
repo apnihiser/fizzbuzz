@@ -22,7 +22,7 @@
 
 <body class="d-flex flex-column h-100">
     <!-- ==== Nav Section ==== -->
-    <nav class="navbar navbar-expand-md navbar-dark fixed-top">
+    <nav class="navbar navbar-expand-md navbar-dark text-dark fixed-top">
         <div class="container-fluid">
             <a class="navbar-brand" href="#"><img src="/img/FIZZBuzz-Nav.png" class="d-inline-block align-text-top" alt="Fuzzy Logo" width="24" height="24"> APP NAME</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse"
@@ -162,9 +162,9 @@
                     </pre>
                 </div>
                 <div class="col-lg-4">
-                    <h5>FUZZY - The APP Breakdown</h5>
-                    <p>FUZZY is a Javascript application written to gather a Fizz Value and a Buzz Value. This will replace these values with a table 1-100 where the numbers divisible by these values will be replaced with Fizz or Buzz respectively, or FizzBuzz if they are both divisible.</p>
-                    <p>FUZZY is a Javascript application written to gather a Fizz Value and a Buzz Value. This will replace these values with a table 1-100 where the numbers divisible by these values will be replaced with Fizz or Buzz respectively, or FizzBuzz if they are both divisible.</p>
+                    <h5>FUZZY - The Breakdown</h5>
+                    <p>FUZZY is a Javascript application written to gather a Fizz Value and a Buzz Value and display a table 1-100 where the numbers divisible by these values will be replaced with Fizz or Buzz respectively, or FizzBuzz if they are both divisible.</p>
+                    <p>The application is broken in 3 sepereate areas of concern.</p>
                     <ul>
                         <li>The Controller function</li>
                         <li>The Logic function</li>
@@ -175,7 +175,7 @@
                     <p>The Controller Function <span class="highlight">getValues()</span> works on several important discreet operations which receives inputs, validates data, and controls when other functions in the application are executed.</p>
                     <p>Lets break these operations down individually</p>
                     <h6>Input</h6>
-                    <p>By using a form, we have structured the web application in such a way that either by default or with user defined values, we can capture the necessary information to begin the process of running the application. Once the input values have been entered into the web form, the user can submit the data by click on the button.</p>
+                    <p>By using a form, we have structured the application in such a way that either by default or by using defined values, we can capture the necessary information to begin running the application. Once the input values have been entered into the web form, the user can submit the data by clicking on the button.</p>
                     <h6>Validation</h6>
                     <p>Validation is required here since the application will fail if a string or text char is provided by the user. Also the values provided will be a string data type. Therefore the <span class="highlight">parseInt()</span> and <span class="highlight">isInteger()</span> Javascript functions are used to ensure that all data sent to be processed are valid. If any of this fails validation, the webpage will alert the user with "You must enter integers"</p>
                     <h6>Function Calls</h6>
@@ -196,7 +196,7 @@
         <div class="container-fluid">
             <div class="row row-cols-1 row-cols-lg-3 gy-2">
                 <div class="col order-last order-lg-first text-light d-flex align-items-center justify-content-start">
-                    <div><span class="text-muted">&copy;2021</span> Adam Nihiser | anihiser@gmail.com</div>
+                    <div><span class="text-dark">&copy;2021</span> Adam Nihiser | anihiser@gmail.com</div>
                 </div>
                 <div class="col d-flex align-items-center justify-content-start justify-content-lg-center">
                     <img src="/img/adam_p_nihiser_logo_notitle.png" alt="Adam Nihiser Logo" height="48">
